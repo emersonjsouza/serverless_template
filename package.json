@@ -1,0 +1,20 @@
+{
+  "name": "sample_sls",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx nodemon --exec sls offline"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.16",
+    "serverless-offline": "^8.8.0"
+  },
+  "devDependencies": {
+    "serverless": "^3.19.0"
+  }
+}

@@ -1,0 +1,20 @@
+service: serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+package:
+  excludeDevDependencies: true
+  individually: true
+  
+plugins:
+  - serverless-offline
+
+functions:
+  app:
+    handler: src/index.app
+    events:
+     - http:
+         path: /test
+         method: get
