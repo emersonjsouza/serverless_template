@@ -5,16 +5,29 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx nodemon --exec sls offline"
+    "start": "npx nodemon --exec sls offline",
+    "prettier-watch": "onchange 'src/**/*.ts' -- prettier --write {{changed}}"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/serverless": "^3.12.7",
+    "aws-lambda": "^1.0.7",
     "nodemon": "^2.0.16",
-    "serverless-offline": "^8.8.0"
+    "serverless-offline": "^8.8.0",
+    "serverless-plugin-typescript": "^2.1.2",
+    "typescript": "^4.7.3"
   },
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.100",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "onchange": "^7.1.0",
+    "prettier": "^2.7.1",
     "serverless": "^3.19.0"
   }
 }
