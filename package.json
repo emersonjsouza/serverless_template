@@ -7,12 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx nodemon --exec sls offline",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
-    "lint": "eslint . --ext .ts"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run prettier-format && npm run lint"
-    }
+    "lint": "eslint . --ext .ts",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
