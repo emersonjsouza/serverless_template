@@ -10,10 +10,11 @@ package:
   
 plugins:
   - serverless-offline
+  - serverless-plugin-typescript
 
 functions:
-  app:
-    handler: src/index.app
+  hello:
+    handler: src/functions/hello.handler
     events:
      - http:
          path: /test
