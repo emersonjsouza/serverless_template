@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx nodemon --exec sls offline",
-    "prettier-format": "onchange 'src/**/*.ts' -- prettier --write"
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "lint": "eslint . --ext .ts"
   },
   "husky": {
     "hooks": {
