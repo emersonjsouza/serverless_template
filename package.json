@@ -8,6 +8,11 @@
     "start": "npx nodemon --exec sls offline",
     "prettier-watch": "onchange 'src/**/*.ts' -- prettier --write {{changed}}"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run prettier-format && npm run lint"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -26,6 +31,7 @@
     "eslint": "^8.17.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.1",
     "onchange": "^7.1.0",
     "prettier": "^2.7.1",
     "serverless": "^3.19.0"
